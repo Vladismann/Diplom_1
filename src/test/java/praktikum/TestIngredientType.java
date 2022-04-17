@@ -9,6 +9,7 @@ import static praktikum.IngredientType.*;
 @RunWith(Parameterized.class)
 public class TestIngredientType {
 
+    //Переменные для параметризации
     private final int index;
     private final IngredientType type;
     private final boolean expectedResult;
@@ -27,8 +28,11 @@ public class TestIngredientType {
         };
     }
 
+    //Тест проверяет, что по индексу в ingredient type enum находится корректное значение
     @Test
     public void checkTheCorrectTypeOfIngredient(){
-        assertEquals("No such ingredient", IngredientType.values()[index].equals(type), expectedResult);
+        assertEquals("No such ingredient",
+                IngredientType.values()[index].equals(type), expectedResult);
     }
+
 }
