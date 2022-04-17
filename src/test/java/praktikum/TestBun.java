@@ -18,12 +18,12 @@ public class TestBun {
 
     //Проверяем, что метод getName возвращает имя указанное в конструкторе
     @Test
-    public void getName() {
+    public void getNameOfBun() {
         String actual = bun.getName();
         assertEquals("The name does not match the specified!", actual, EXPECTED_NAME);
     }
     @Test
-    public void getPrice() {
+    public void getPriceOfBun() {
         float actual = bun.getPrice();
         assertEquals("The price does not match the specified!", actual, EXPECTED_PRICE, 0);
     }
