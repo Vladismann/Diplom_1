@@ -11,9 +11,11 @@ import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
 public class TestIngredient {
 
-    private final String EXPECTED_NAME = "= test sauce =";
+    //Передоваемое тестовое имя и цена
+    private final String EXPECTED_NAME = "test sauce";
     private final float EXPECTED_PRICE = 7.77F;
     private Ingredient ingredient;
+
     @Mock
     private IngredientType type;
 
