@@ -3,6 +3,7 @@ package praktikum;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+
 import static org.junit.Assert.assertEquals;
 import static praktikum.IngredientType.*;
 
@@ -30,7 +31,7 @@ public class TestIngredientType {
 
     //Тест проверяет, что по индексу в ingredient type enum находится корректное значение
     @Test
-    public void checkTheCorrectTypeOfIngredient(){
+    public void checkTheCorrectTypeOfIngredient() {
         assertEquals("No such ingredient",
                 IngredientType.values()[index].equals(type), expectedResult);
     }

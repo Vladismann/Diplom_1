@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TestBun {
 
     //Передоваемое тестовое имя и цена
-    private final String EXPECTED_NAME = "(==== test bun ====)";
+    private final String EXPECTED_NAME = "test bun";
     private final float EXPECTED_PRICE = 6.66F;
     private Bun bun;
 

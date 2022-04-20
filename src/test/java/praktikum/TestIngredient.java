@@ -20,7 +20,7 @@ public class TestIngredient {
     private IngredientType type;
 
     @Before
-    public void setUp(){
+    public void setUp() {
         ingredient = new Ingredient(type, EXPECTED_NAME, EXPECTED_PRICE);
     }
 
@@ -29,17 +29,19 @@ public class TestIngredient {
     public void getTypeOfIngredient() {
         assertEquals("The type of the ingredient does not match the specified!", ingredient.getType(), type);
     }
+
     //Проверяем, что метод getName возвращает имя указанное в конструкторе
     @Test
     public void getNameOfIngredient() {
         String actual = ingredient.getName();
         assertEquals("The name of the ingredient does not match the specified!", actual, EXPECTED_NAME);
     }
+
     //Проверяем, что метод getPrice возвращает цену указанную в конструкторе
     @Test
     public void getPriceOfIngredient() {
         float actual = ingredient.getPrice();
-        assertEquals("The price of the ingredient does not match the specified!", actual,  EXPECTED_PRICE, 0);
+        assertEquals("The price of the ingredient does not match the specified!", actual, EXPECTED_PRICE, 0);
     }
 
 }
