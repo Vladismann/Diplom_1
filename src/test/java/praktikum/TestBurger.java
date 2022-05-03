@@ -3,7 +3,6 @@ package praktikum;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
@@ -21,8 +20,6 @@ public class TestBurger {
     float ingredientPrice = 7.77F;
     //Объекты для теста
     Burger burger;
-    @Mock
-    IngredientType filling = mock(IngredientType.class);
     Ingredient firstIngredient = mock(Ingredient.class);
     Ingredient secondIngredient = mock(Ingredient.class);
     Bun bun = mock(Bun.class);
@@ -85,7 +82,7 @@ public class TestBurger {
         Mockito.when(bun.getName()).thenReturn(bunName);
         Mockito.when(firstIngredient.getName()).thenReturn(ingredientName);
         Mockito.when(firstIngredient.getPrice()).thenReturn(ingredientPrice);
-        Mockito.when(firstIngredient.getType()).thenReturn(filling.FILLING);
+        Mockito.when(firstIngredient.getType()).thenReturn(IngredientType.FILLING);
         String expectedFormat =
                 String.format("(==== %s ====)%n", bunName) +
                         String.format("= %s %s =%n", firstIngredient.getType().toString().toLowerCase(), ingredientName) +
